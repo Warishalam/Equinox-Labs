@@ -1,24 +1,15 @@
-import Person from "./components/Person"
-import Table from "./components/Table"
+import Main from "./components/Main"
 import React from "react"
+import {useEffect} from "react"
 
 
 function App() {
 
-    
- 
-
-  return (
-    <div style = {{
-         display : "flex",
-         justifyContent : "space-around",
-         marginTop : "100px",
-
-    }}>
-         <Person/>
-         <Table />
-    </div>
-  );
+  return(  
+           <div>
+                <Main />
+           </div>
+       )
 }
 
 export default App;

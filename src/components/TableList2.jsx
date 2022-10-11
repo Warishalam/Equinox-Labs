@@ -20,7 +20,7 @@ const Row = styled.tr`
 
 
 
-const TableList = ({data}) => {
+const TableList2 = ({data}) => {
 
 
       const timeSlots = [" " ,"09:00" , "10:00" , "11:00" , "12:00" , "13:00" , "14:00" , "15:00" ,
@@ -52,11 +52,11 @@ const TableList = ({data}) => {
 
           data.map((itemObj) => {
             
-              itemObj.communication_Count === "0" ? emailBox.push("") :  emailBox.push(itemObj.communication_Count);
-              itemObj.Call_count === "0" ?  callBox.push("") : callBox.push(itemObj.Call_count)
-              itemObj.LEAD_Count === "0" ?  personBox.push("") :  personBox.push(itemObj.LEAD_Count)
-              itemObj.Meeting_Count === "0" ? groupPersonBox.push("") : groupPersonBox.push(itemObj.Meeting_Count)
-              itemObj.Proposal_Count === "0" ?  messageBox.push("") : messageBox.push(itemObj.Proposal_Count)
+              emailBox.push(itemObj.communication_Count);
+              callBox.push(itemObj.Call_count)
+              personBox.push(itemObj.LEAD_Count)
+              groupPersonBox.push(itemObj.Meeting_Count)
+              messageBox.push(itemObj.Proposal_Count)
           })
 
 
@@ -78,7 +78,7 @@ const TableList = ({data}) => {
                                {
                                   timeSlots.map((slot) => {
                                       return (
-                                          <th>{slot}</th>
+                                          <th></th>
                                       )
                                   })
                                }
@@ -107,4 +107,4 @@ const TableList = ({data}) => {
         )
 }
 
-export default TableList
+export default TableList2
